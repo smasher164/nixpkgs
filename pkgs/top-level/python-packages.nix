@@ -3619,8 +3619,6 @@ in {
 
   hdfs = callPackage ../development/python-modules/hdfs { };
 
-  hdlparse = callPackage ../development/python-modules/hdlparse { };
-
   hdmedians = callPackage ../development/python-modules/hdmedians { };
 
   headerparser = callPackage ../development/python-modules/headerparser { };
