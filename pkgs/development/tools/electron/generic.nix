@@ -6,6 +6,7 @@
 , glib
 , gtk3
 , unzip
+, libglvnd
 , atomEnv
 , libuuid
 , at-spi2-atk
@@ -32,12 +33,12 @@ let
   };
 
   fetcher = vers: tag: hash: fetchurl {
-    url = "https://github.com/electron/electron/releases/download/v${vers}/electron-v${vers}-${tag}.zip";
+    url = "https://1107659-9384267-gh.circle-artifacts.com/0/dist.zip";
     sha256 = hash;
   };
 
   headersFetcher = vers: hash: fetchurl {
-    url = "https://atom.io/download/electron/v${vers}/node-v${vers}-headers.tar.gz";
+    url = "https://1107659-9384267-gh.circle-artifacts.com/0/node_headers.tar.gz";
     sha256 = hash;
   };
 
@@ -60,7 +61,7 @@ let
   };
 
   electronLibPath = with lib; makeLibraryPath (
-    [ libuuid at-spi2-atk at-spi2-core libappindicator-gtk3 ]
+    [ libuuid at-spi2-atk at-spi2-core libappindicator-gtk3 libglvnd ]
     ++ optionals (! versionOlder version "9.0.0") [ libdrm mesa ]
     ++ optionals (! versionOlder version "11.0.0") [ libxkbcommon ]
     ++ optionals (! versionOlder version "12.0.0") [ libxshmfence ]

@@ -6,6 +6,7 @@
 , glib
 , gtk3
 , unzip
+, libglvnd
 , atomEnv
 , libuuid
 , at-spi2-atk
@@ -113,7 +114,7 @@ rec {
   electron_16 = mkElectron "16.0.7" {
     armv7l-linux = "8a8567c745ab1c2b1de19305da0a0036ba100b27e1fc4eb014aca325aff3193e";
     aarch64-linux = "6d27cc9acc3f580118cdd685d629d39c2a1fc094376b719fa0100a7446f8fede";
-    x86_64-linux = "544cd6d48262f24c8a82d2e8079b20889ec5e83959404fdda9ad00c86e9efa70";
+    x86_64-linux = "sha256-9Va0YwmVZb7bbujT6l+f5Su6cDol5OyihDtQOiu0whU=";
     i686-linux = "8b79ce5fbc704eb03c34d4b96765314074a687ae3165cab21f84f77fee36d755";
     x86_64-darwin = "e5c825d4cfc1dabd066986fa1cae3ee880f222b053c760b700b24899fb02d4db";
     aarch64-darwin = "9fa9dc44e5d71de7a999b3db07a583e0a04252747486c16955232eba498b259d";
